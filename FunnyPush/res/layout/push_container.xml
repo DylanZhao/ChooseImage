@@ -1,0 +1,123 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/content_two"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@drawable/tip_bg"
+        android:paddingLeft="24dip"
+        android:paddingRight="24dip" >
+
+        <RelativeLayout
+            android:id="@+id/app_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" >
+
+            <include layout="@layout/push_app_single" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/divider_line"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:scaleType="matrix"
+            android:src="@drawable/divider" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/or" />
+
+        <RelativeLayout
+            android:id="@+id/app_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" >
+
+            <include layout="@layout/push_app_single" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/content_one"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@drawable/tip_bg"
+        android:paddingLeft="10dip"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/one_icon"
+            android:layout_width="52dip"
+            android:layout_height="52dip"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_a" />
+
+        <ImageView
+            android:id="@+id/one_img"
+            android:layout_width="52dip"
+            android:layout_height="52dip"
+            android:layout_centerVertical="true"
+            android:background="@drawable/icon_cover" />
+
+        <TextView
+            android:id="@+id/one_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/one_icon"
+            android:layout_marginLeft="6dip"
+            android:layout_marginTop="2dip"
+            android:layout_toLeftOf="@+id/btn_install"
+            android:layout_toRightOf="@id/one_icon"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:text="捕鱼日记"
+            android:textColor="#ffffffff"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/one_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/btn_install"
+            android:layout_marginLeft="6dip"
+            android:layout_toLeftOf="@+id/btn_install"
+            android:layout_toRightOf="@id/one_icon"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:text="休闲 | 10.25M | 下载 2500"
+            android:textColor="#ffffffff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/btn_install"
+            android:layout_width="52dip"
+            android:layout_height="30dip"
+            android:layout_alignBottom="@id/one_icon"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/blue_btn"
+            android:gravity="center"
+            android:text="安装"
+            android:textColor="#ffffffff"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/close_btn" />
+    </RelativeLayout>
+
+</RelativeLayout>
